@@ -70,7 +70,7 @@ async def read_z_n(message: types.Message, state: FSMContext):
             mess = f"{item[1]}\n{item[2]}"
             await message.answer(f'з/н {mess}', reply_markup=kb_main)
     else:
-        await message.answer('нихера сегодня не перемещали', reply_markup=kb_main)
+        await message.answer('Ничего сегодня не перемещали', reply_markup=kb_main)
     await state.finish()
 
 
