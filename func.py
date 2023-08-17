@@ -57,6 +57,14 @@ hubs_6520 = KeyboardButton(text='6520')
 kb_hubs.add(hubs_43118,hubs_6520)
 
 
+def gbc_kb():
+    gbc_kamaz = ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
+    bt_740 = KeyboardButton(text='ГБЦ 740')
+    bt_901 = KeyboardButton(text='ГБЦ 901')
+    gbc_kamaz.add(bt_740, bt_901)
+    return gbc_kamaz
+
+
 async def set_default_commands(dip):
     await dip.bot.set_my_commands([
         types.BotCommand("start", "старт бот"),

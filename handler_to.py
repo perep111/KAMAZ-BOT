@@ -1,6 +1,6 @@
 from config import dp, bot
 from aiogram import types
-from func import kb_to, kb_main, kb_hubs, write_to_db_user, kb_china, kb_kamaz
+from func import kb_to, kb_main, kb_hubs, write_to_db_user, kb_china, kb_kamaz, gbc_kb
 
 
 @dp.message_handler(text="Просмотр ТО")
@@ -24,6 +24,11 @@ async def read_to(message: types.Message):
 @dp.message_handler(text="Ступицы")
 async def read_to(message: types.Message):
     await message.answer('Ступицы бывают разные',reply_markup=kb_hubs)
+
+
+@dp.message_handler(text="ГБЦ")
+async def read_to(message: types.Message):
+    await message.answer('На какой камаз ГБЦ интересует?',reply_markup=gbc_kb())
 
 
 @dp.message_handler(text="КОМПАС")
@@ -60,8 +65,28 @@ async def read_to(message: types.Message):
                          reply_markup=kb_main, disable_web_page_preview=True)
 
 
-@dp.message_handler(text="ГБЦ")
-async def read_to(message: types.Message):
+@dp.message_handler(text="ГБЦ 901")
+async def gbc_901(message: types.Message):
+    await message.answer('На гарантию выдаем следующий комплект\n'
+                         '1) Прокладка головки цилиндров\n'
+                         '<a href="https://klassauto.ru/netcat_files/catalog/8e728d3d-745c-11ed-80e0-fa1567ac73f8_eba8aecd-86ae-11ed-80e3-b09606ecff34.jpeg">'
+                         '171155-1j</a>  6шт\n'
+                         '-------------------------------\n'
+                         '2) Болт с шестигранной головкой\n'
+                         'М16х1,5-6gx210.109\n'
+                         '<a href="https://www.vao-mos.info/wp-content/uploads/2020/01/cherynj-kvadrat-598x381.png">'
+                         '910.10-1003016-10</a>  36шт\n'
+                         '-------------------------------\n'
+                         '3) Прокладка выпускного коллектора\n'
+                         '719-14-46  6шт\n'
+                         '-------------------------------\n'
+                         '4) Прокладка впускного коллектора\n'
+                         '<a href="https://www.kamazik.ru/upload/iblock/681/b787jy9qal2jlio4uo8tq4xh937vqmwk.jpeg">'
+                         '910.11-1115026</a>  6шт', disable_web_page_preview=True, reply_markup=kb_main)
+
+
+@dp.message_handler(text="ГБЦ 740")
+async def gbc_740(message: types.Message):
     await message.answer('1) Головка цилиндра с клапанами 90\n'
                          '<a href="https://zapkamautocentr.ru/a/kamavto/files/multifile/2353/740.90_1003010.JPG">'
                          '740.90-1003010</a>  8шт\n'
