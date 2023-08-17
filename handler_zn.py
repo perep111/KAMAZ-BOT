@@ -55,7 +55,7 @@ async def read_z_n(message: types.Message):
 
 @dp.message_handler(text="отмена", state='*')
 async def read_z_n(message: types.Message, state: FSMContext):
-    await message.answer('отменено', reply_markup=kb_main)
+    await message.answer('Отменено', reply_markup=kb_main)
     await state.finish()
 
 
