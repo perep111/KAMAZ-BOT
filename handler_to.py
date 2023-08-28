@@ -206,7 +206,10 @@ async def read_z_n(message: types.Message):
                          '8) Фильтр воздушный внутренний\n'
                          ' <a href="https://disk.yandex.ru/i/nZ7J6mbhwLGlig">'
                          'ЭФВ725.1109560-10-01</a> -----------1шт\n'
-                         ' <u>аналоги: ЛНАЕ 1109660-10</u>',
+                         ' <u>аналоги: ЛНАЕ 1109660-10</u>\n\n'
+                         '9) Фильтр салона\n'
+                         ' <a href="https://www.akgs.market/_upload/detail_pics/AVTOTEHNICA%20-NN/53208101294.JPG">'
+                         '5320-8101294</a> -----------------1шт',
                          reply_markup=kb_main, disable_web_page_preview=True)
 
 
@@ -243,9 +246,11 @@ async def read_z_n(message: types.Message):
                          'ЭФВ721.1109560-30</a> ---------------1шт\n'
                          ' <u>аналоги ЛНАЕ 1109660-10</u>\n\n'
                          '8) Ремкомплект масляного фильтра\n'
-                         ' <a href="https://www.mi-parts.ru/file/catalog/pic/thumb1/'
-                         'fb61425aec11b5ab36ec5ab49d13ae37.jpg">'
-                         'СТР-7406-1012000РК</a> --------------1шт',
+                         ' <a href="https://www.mi-parts.ru/file/catalog/pic/thumb1fb61425aec11b5ab36ec5ab49d13ae37.jpg">'
+                         'СТР-7406-1012000РК</a> --------------1шт\n\n'
+                         '9) Фильтр салона\n'
+                         ' <a href="https://www.akgs.market/_upload/detail_pics/AVTOTEHNICA%20-NN/53208101294.JPG">'
+                         '5320-8101294</a> -----------------1шт',
                          reply_markup=kb_main, disable_web_page_preview=True)
 
 
