@@ -18,8 +18,6 @@ class UserState(StatesGroup):
 
 @dp.message_handler(commands=['start'])
 async def get_menu(message: types.Message):
-    await create_table()
-    await create_table_users()
     await write_to_db_user(message.from_user.id, message.from_user.username)
 
     username = message.from_user.first_name
