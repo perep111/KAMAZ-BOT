@@ -3,3 +3,5 @@
 .db
 .idea/
 kamaz.db
+venv/
+__pycache__/
